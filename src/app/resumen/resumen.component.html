@@ -1,0 +1,163 @@
+  <section class="content" id="about">
+      <div class="block-content">
+          <h3 class="block-title">Perfil</h3>
+          <h3 class="subheading">¡Hola! soy Elvin Cardenas <strong> Programador BackEnd/FrontEnd</strong></h3>
+          <p>Un Desarrollador web backend y frontend creativo con 1 año de experiencia en el desarrollo de aplicaciones en el tanto en backend y frontend. Trato de mantenerme al día con las últimas tendencias, apasionado por aprender nuevas tecnologías, dar vida a ideas y trabajar para construir aplicaciones eficientes y robustas adaptadas a las necesidades del usuario. .</p>
+          <div class="info-list row">
+              <div class="col-sm-6"><span>Nombre : </span> Elvin Cardenas Calcina</div>
+              <div class="col-sm-6"><span>Fecha de Nacimiento : </span> Julio 10, 1993 </div>
+              <div class="col-sm-6"><span>Dirección : </span> Perú, Lima, Los Olivos.</div>
+              <div class="col-sm-6"><span>Email : </span> zoldadodelacruz@gmail.com</div>
+              <div class="col-sm-6"><span>Telefono : </span> + 51 931648176</div>
+              <div class="col-sm-6"><span>Interes : </span> Frelance, Full-Time,Back-end</div>
+          </div>
+      </div>
+      <div class="block-content">
+          <h3 class="block-title">HABILIDADES TECNICAS </h3>
+          <div *ngFor="let profex of cv.profesional">
+            <label class="progress-bar-label">{{ profex.nombre }}</label>
+            <div class="progress">
+                <div [style.width.%]=profex.valor class="progress-bar" role="progressbar" attr.aria-valuenow="{{ profex.valor }}" aria-valuemin="0" aria-valuemax="100">
+                    <span>{{ profex.valor }}%</span>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="block-content">
+          <h3 class="block-title">Experiencia</h3>
+          <div class="timeline experience">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="exp-holder">
+                          <div *ngFor="let expex of cv.experiencia">
+                            <div class="exp">
+                                <div class="hgroup">
+                                    <h4><span>{{ expex.Empresa }}</span> - {{ expex.Cargo }}</h4>
+                                    <h5> {{ expex.Fecha }} </h5>
+                                </div>
+                                <p>{{ expex.Descripcion }}</p>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="block-content">
+          <h3 class="block-title">Educación</h3>
+          <div class="timeline education">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="exp-holder">
+                        <div *ngFor="let edux of cv.educacion">
+                          <div class="exp">
+                              <div class="hgroup">
+                                  <h4>{{ edux.Nombre }} | <a href="{{ edux.Url }}" target="_blank"><span>Ver Certificado</span></a></h4>
+                                  <h5>{{ edux.Fecha }}</h5>
+                              </div>
+                              <p>{{ edux.Descripcion }}</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="block-content">
+          <h3 class="block-title">Servicios</h3>
+          <div class="row">
+              <div class="col-md-4 col-sm-6 service" *ngFor="let service of cv.servicios">
+                  <div class="service-icon">
+                      <i class="{{service.Icono}}"></i>
+                  </div>
+                  <h4>{{service.Nombre}}</h4>
+                  <p>{{service.Descripcion}}</p>
+              </div>
+              <!-- <div class="col-md-4 col-sm-6 service">
+                  <div class="service-icon">
+                      <i class="ion-pie-graph"></i>
+                  </div>
+                  <h4>Desarrollo de Aplicaciones</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              </div>
+              <div class="col-md-4 col-sm-6 service">
+                  <div class="service-icon">
+                      <i class="ion-paintbucket"></i>
+                  </div>
+                  <h4>Diseño Grafico</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              </div>
+              <div class="col-md-4 col-sm-6 service">
+                  <div class="service-icon">
+                      <i class="ion-printer"></i>
+                  </div>
+                  <h4>Print Design</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              </div>
+              <div class="col-md-4 col-sm-6 service">
+                  <div class="service-icon">
+                      <i class="ion-qr-scanner"></i>
+                  </div>
+                  <h4>Graphic Design</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              </div>
+              <div class="col-md-4 col-sm-6 service">
+                  <div class="service-icon">
+                      <i class="ion-social-buffer"></i>
+                  </div>
+                  <h4>Print Design</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              </div> -->
+          </div>
+      </div>
+     <!--  <div class="block-content">
+          <h3 class="block-title">Awards</h3>
+          <div class="row">
+              <div class="col-md-3 col-sm-6 awards">
+                  <img src="assets\images\awards\1.jpeg" alt="">
+              </div>
+              <div class="col-md-3 col-sm-6 awards">
+                  <img src="assets\images\awards\2.jpeg" alt="">
+              </div>
+              <div class="col-md-3 col-sm-6 awards">
+                  <img src="assets\images\awards\3.jpeg" alt="">
+              </div>
+              <div class="col-md-3 col-sm-6 awards">
+                  <img src="assets\images\awards\4.jpeg" alt="">
+              </div>
+          </div>
+      </div> -->
+      <div class="block-content">
+          <h3 class="block-title">Testimonios</h3>
+          <div class="row">
+              <div id="liontestimonial" class="owl-carousel owl-theme">
+                  <div *ngFor="let testix of cv.testimonio">
+                    <div class="item testimonials">
+                        <img src="assets\images\testimonials\1.jpeg" alt="">
+                        <blockquote>{{ testix.Descripcion }}
+                            <p class="quote"><span>{{ testix.Nombre }}</span> - {{ testix.Cargo }}</p>
+                        </blockquote>
+                    </div>
+                </div>
+
+              </div>
+          </div>
+      </div>
+      <div class="row text-center">
+        <div id="contact" class="contact">
+          <!-- <div class="col-md-12 btn-email"> -->
+            <h2 class="contact-title mt-4">Contacteme Aqui</h2>
+        <p>En este momento estoy abierto a nuevas oportunidades y experiencias. <br/> Si tiene alguna pregunta, no dude en ponerse en contacto conmigo en cualquier momento.</p>
+        <div class="btn-email">
+              <a class="btn lowercase email-link" href="mailto:zoldadodelacruz@gmail.com">zoldadodelacruz@gmail.com</a>
+          </div>
+          </div>
+
+       
+         
+      </div>
+
+   
+       
+
+  </section>
